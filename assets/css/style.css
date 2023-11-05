@@ -206,8 +206,21 @@ h1, h2, h3, h4, h5, h6 {
 #hero {
   width: 100%;
   height: 100vh;
-  background: url("../img/hero-bg.jpg") top center;
+  background-image: url("../img/hero-bg.jpg");
+  background-position: center;
   background-size: cover;
+}
+
+/* Rest of your CSS remains the same */
+
+/* Add a media query for smaller screens to adjust the background image size and position */
+@media (max-width: 768px) {
+  #hero {
+    background-size: contain; /* You can adjust the value as needed */
+    background-position: center; /* Center the image */
+    background-repeat: no-repeat;
+    background-color:black;
+  }
 }
 
 #hero:before {
@@ -240,7 +253,8 @@ h1, h2, h3, h4, h5, h6 {
 #hero p {
   color: #fff;
   margin-bottom: 50px;
-  font-size: 26px;
+  margin-right: 100px;
+  font-size: 20px;
   font-family: "Poppins", sans-serif;
 }
 
